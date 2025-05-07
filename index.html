@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ffe8cc);
+      /* overflow: hidden; */
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff5e9c;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .confetti {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+    }
+
+    /* Confetti from https://codepen.io/linrock/pen/Amdhr */
+    canvas#confetti-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🎉 Happy Birthday, Janvi ! 🎂</h1>
+  <img src="https://i.imgur.com/YOUR_IMAGE.jpg" alt="Birthday Girl">
+  <h2>Wishing you a day filled with love, laughter, and endless joy.</h2>
+  <p>
+    <p>
+        You are one of the kindest, most beautiful souls I know.  
+        I don't know why it happened the way it did — you talked to me for a while, and then blocked me.  
+        I don't want to know the reason, because I **respect you**. LET IT BE...
+      </p>
+      <p>
+        Just please text me, if you feel like it — *do you like this webpage?* (Only if you want to).  
+        I'm sorry I couldn’t add your photo here — I don’t have one,If I had then also I wouldn’t use it without your permission.  
+        But I promise, this page would look even more beautiful with your smile on it.
+      </p>
+      <p>
+        I hope this birthday is just as amazing as you are!  
+        **Keep smiling, keep shining, and never stop being YOU. ✨**
+      </p>
+      <p style="font-size: 0.95rem; color: #666; font-style: italic;">
+        *Only you can see this page.*
+      </p>
+      
+      <p>— Your friend... or whatever you’d like me to be  </p>
+      <p style="font-size:2 rem">SS</p>
+      
+  </p>
+ 
+  
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<!-- Confetti JS -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  const duration = 10 * 1000;
+  const end = Date.now() + duration;
+
+  (function frame() {
+    confetti({
+      particleCount: 4,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+    });
+    confetti({
+      particleCount: 4,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+</script>
+
+</body>
+</html>
